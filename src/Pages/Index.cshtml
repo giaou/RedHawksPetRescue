@@ -1,0 +1,15 @@
+﻿@page
+@using ContosoCrafts.WebSite.Components
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<body>
+
+<!--Link to AllPetsListing page-->
+    <center><a class="nav-link" asp-area="" asp-page="/Product/AllPetsListing"> <h2>Click Here to View All Available Pets</h2> </a></center>
+@(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered))
+
+
+<script src="_framework/blazor.server.js"></script>
+</body>
